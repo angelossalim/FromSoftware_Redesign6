@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FromSoftware Redesign — Games</title>
+  <link rel="stylesheet" href="Css/style.css">
+
+  <!-- Page-specific CSS overrides to fix layout/spacing/image sizing on games page -->
+  <style>
+    /* Layout for each game block */
+    .games-list {
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+      padding-top: 8px;
+    }
+
+    .game-section {
+      display: flex;
+      align-items: flex-start;
+      gap: 28px;
+      padding: 18px 0;
+      border-radius: 10px;
+      background: transparent;
+    }
+
+    /* Media column */
+    .game-media {
+      flex: 0 0 420px;
+      max-width: 420px;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #0b0b0b;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+      border: 1px solid rgba(255,255,255,0.02);
+    }
+    /* Make images responsive and contained within the frame */
+    .game-media img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    /* Content column */
+    .game-content {
+      flex: 1 1 auto;
+      min-width: 220px;
+      color: #e6e6e6;
+    }
+    .game-content h1, .game-content h2 {
+      margin: 0 0 12px;
+      color: #fff;
+      font-size: 22px;
+    }
+    .game-content p {
+      margin: 0 0 14px;
+      color: #d4d4d4;
+      line-height: 1.6;
+      max-width: 72ch;
+    }
+
+    /* Smaller supporting metadata (release, features) */
+    .game-meta {
+      margin-top: 8px;
+      font-size: 14px;
+      color: #a9a9a9;
+    }
+
+    /* Keep consistent spacing between stacked items on small screens */
+    @media (max-width: 880px) {
+      .game-section {
+        flex-direction: column;
+        gap: 18px;
+      }
+      .game-media {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+      }
+      .game-content h1, .game-content h2 { font-size: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-container header-inner">
+      <a class="brand" href="index.html">
+        <img src="images/logo.png" alt="FromSoftware logo" class="brand-logo">
+        <span class="brand-text">FromSoftware</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="games.html">Games</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#join">Join</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="content-section alt">
+      <div class="site-container">
+        <h1>Games</h1>
+
+        <div class="games-list">
+          <!-- DARK SOULS -->
+          <article class="game-section" id="dark-souls">
+            <div class="game-media" aria-hidden="false">
+              <img src="images/darksouls.jpg" alt="Dark Souls cover art">
+            </div>
+
+            <div class="game-content">
+              <h2>Dark Souls</h2>
+              <p>Dark Souls is a gritty and punishing action RPG that emphasizes exploration, methodical combat, and rewarding discovery. This page contains an overview, key features, and links to community resources and guides.</p>
+              <p class="game-meta">
+                Genre: Action RPG — Notable for deliberate combat, interconnected world design and deep lore.
+              </p>
+              <p style="margin-top:18px;">
+                <a class="btn-primary" href="index.html">Back to home</a>
+                <a class="btn-details" href="games/darksouls.html" style="margin-left:12px;">Read more</a>
+              </p>
+            </div>
+          </article>
+
+          <!-- BLOODBORNE -->
+          <article class="game-section" id="bloodborne">
+            <div class="game-media">
+              <img src="images/bloodborne.jpg" alt="Bloodborne cover art">
+            </div>
+
+            <div class="game-content">
+              <h2>Bloodborne</h2>
+              <p>Bloodborne features aggressive, high-risk combat set within gothic, nightmarish environments. The game pushes quick decision-making and risk-reward mechanics for combat and exploration.</p>
+              <p class="game-meta">Genre: Action RPG — Faster combat tempo and gothic horror influences.</p>
+              <p style="margin-top:18px;">
+                <a class="btn-primary" href="index.html">Back to home</a>
+                <a class="btn-details" href="games/bloodborne.html" style="margin-left:12px;">Read more</a>
+              </p>
+            </div>
+          </article>
+
+          <!-- ELDEN RING -->
+          <article class="game-section" id="elden-ring">
+            <div class="game-media">
+              <img src="images/eldenring.jpg" alt="Elden Ring cover art">
+            </div>
+
+            <div class="game-content">
+              <h2>Elden Ring</h2>
+              <p>Elden Ring expands FromSoftware's design into a wide-open world full of emergent possibilities, deep lore, and expansive exploration opportunities.</p>
+              <p class="game-meta">Genre: Open-world Action RPG — Large-scale exploration, varied builds and community showcases.</p>
+              <p style="margin-top:18px;">
+                <a class="btn-primary" href="index.html">Back to home</a>
+                <a class="btn-details" href="games/eldenring.html" style="margin-left:12px;">Read more</a>
+              </p>
+            </div>
+          </article>
+
+          <!-- SEKIRO -->
+          <article class="game-section" id="sekiro">
+            <div class="game-media">
+              <img src="images/sekiro.jpg" alt="Sekiro cover art">
+            </div>
+
+            <div class="game-content">
+              <h2>Sekiro</h2>
+              <p>Sekiro emphasizes precision and timing in melee combat with parry mechanics, vertical traversal and tightly designed encounters.</p>
+              <p class="game-meta">Genre: Action — Focused on parry/timing mechanics and precise encounters.</p>
+              <p style="margin-top:18px;">
+                <a class="btn-primary" href="index.html">Back to home</a>
+                <a class="btn-details" href="games/sekiro.html" style="margin-left:12px;">Read more</a>
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-container">
+      <p>&copy; <span id="year"></span> FromSoftware Redesign</p>
+    </div>
+  </footer>
+
+  <script src="Js/main.js" defer></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

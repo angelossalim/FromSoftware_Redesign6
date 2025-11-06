@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sekiro — FromSoftware</title>
+  <link rel="stylesheet" href="../Css/style.css">
+
+  <style>
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 880px;
+      margin: 18px 0;
+      background: #000;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+    }
+    .video-wrapper::before { content: ""; display:block; padding-top:56.25%; }
+    .video-wrapper iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
+    .video-actions { margin-top:8px; font-size:14px; }
+    .video-actions a { color:#fff; text-decoration:underline; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-container header-inner">
+      <a class="brand" href="../index.html">
+        <img src="../images/logo.png" alt="FromSoftware logo" class="brand-logo">
+        <span class="brand-text">FromSoftware</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../games.html">Games</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="content-section alt">
+      <div class="site-container">
+        <h1>Sekiro</h1>
+        <div style="display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap;">
+          <div style="flex:1;min-width:280px;">
+            <img src="../images/sekiro.jpg" alt="Sekiro" style="width:100%;border-radius:8px;object-fit:cover;">
+          </div>
+          <div style="flex:1.2;min-width:280px;">
+            <h2>Overview</h2>
+            <p>Sekiro emphasizes precision parrying and tight, fast-paced combat. Add your own media, lore, and community guides here.</p>
+
+            <h3>Features</h3>
+            <ul>
+              <li>Precision parrying mechanics</li>
+              <li>Challenging boss encounters</li>
+              <li>Playstyle and guide resources</li>
+            </ul>
+
+            <p><a class="btn-primary" href="../index.html">Back to home</a></p>
+          </div>
+        </div>
+
+        <!-- Video section -->
+        <h2 style="margin-top:28px;">Video</h2>
+        <div class="video-wrapper" aria-hidden="false">
+          <iframe
+            src="https://www.youtube.com/embed/QFhaL4s10Iw"
+            title="Sekiro - Video"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="video-actions">
+          <a href="https://www.youtube.com/watch?v=QFhaL4s10Iw" target="_blank" rel="noopener">Open on YouTube</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-container">
+      <p>&copy; <span id="year"></span> FromSoftware Redesign</p>
+    </div>
+  </footer>
+  <script src="../Js/main.js" defer></script>
+</body>
+</html>
+
+
+
+
+

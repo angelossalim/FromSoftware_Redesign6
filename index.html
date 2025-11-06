@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FromSoftware — Home</title>
+  <link rel="stylesheet" href="Css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-container header-inner">
+      <a class="brand" href="index.html">
+        <img src="images/logo.png" alt="FromSoftware logo" class="brand-logo">
+        <span class="brand-text">FromSoftware</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="games.html">Games</a></li>
+          <li class="nav-item"><a class="nav-link" href="#join">Join</a></li>
+        </ul>
+      </nav>
+
+      <!-- Search toggle button (keeps the button in the header) -->
+      <div class="header-actions">
+        <button id="search-toggle" class="search-toggle" aria-expanded="false" aria-label="Open site search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+            <path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="11" cy="11" r="6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Moved the search panel OUTSIDE the header and made it fixed so it reliably receives focus/keyboard events -->
+  <div id="site-search" class="site-search" aria-hidden="true">
+    <div class="site-search-panel" role="dialog" aria-modal="true" aria-label="Site search">
+      <div class="site-search-head">
+        <input id="site-search-input" class="site-search-input" type="search" placeholder="Search games (e.g. Bloodborne)" aria-label="Search games" autocomplete="off">
+        <button id="site-search-close" class="site-search-close" aria-label="Close search">✕</button>
+      </div>
+      <div id="site-search-results" class="site-search-results" role="listbox" aria-live="polite">No results</div>
+      <div class="site-search-hint">Press Esc to close. Press Enter to open first result.</div>
+    </div>
+  </div>
+
+  <main>
+    <section id="home" class="hero-section">
+      <div class="site-container hero-inner">
+        <h1 class="hero-title">Welcome to FromSoftware</h1>
+        <p class="hero-sub">A modern reimagining of the community site — design experiments, news, and community features.</p>
+        <p><a class="btn-primary" href="#join">Join the Community</a></p>
+      </div>
+    </section>
+
+    <section id="about-preview" class="content-section">
+      <div class="site-container">
+        <h2>About this redesign</h2>
+        <p>This project experiments with layout, typography, and accessible components while keeping a moody, atmospheric aesthetic reminiscent of the games.</p>
+        <p><a class="link-secondary" href="about.html">Read more →</a></p>
+      </div>
+    </section>
+
+    <!-- GAMES SLIDER (4 games only) -->
+    <section id="games-preview" class="content-section alt">
+      <div class="site-container">
+        <div class="games-header">
+          <h2>Featured games</h2>
+          <div class="slider-controls" aria-hidden="true">
+            <span class="slider-hint">Drag to slide →</span>
+          </div>
+        </div>
+
+        <div class="games-slider" id="games-slider" tabindex="0" aria-label="Featured games. Use arrows, dots, or drag to navigate.">
+          <button class="slider-arrow left" id="slider-prev" aria-label="Previous game">&larr;</button>
+
+          <div class="slides" id="slides-track" role="list">
+            <article class="slide" role="listitem" data-title="Dark Souls" data-desc="Classic atmospheric action RPG — reimagined content and galleries." data-img="images/darksouls.jpg">
+              <div class="slide-inner" tabindex="0" role="button" aria-pressed="false" aria-label="Open Dark Souls preview">
+                <div class="slide-thumb"><img src="images/darksouls.jpg" alt="Dark Souls" /></div>
+                <div class="slide-body">
+                  <h3>Dark Souls</h3>
+                  <p>Classic atmospheric action RPG — reimagined content and galleries.</p>
+                  <a class="btn-details" href="games/darksouls.html">View details</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="slide" role="listitem" data-title="Bloodborne" data-desc="Fast and brutal combat with gothic environments." data-img="images/bloodborne.jpg">
+              <div class="slide-inner" tabindex="0" role="button" aria-pressed="false" aria-label="Open Bloodborne preview">
+                <div class="slide-thumb"><img src="images/bloodborne.jpg" alt="Bloodborne" /></div>
+                <div class="slide-body">
+                  <h3>Bloodborne</h3>
+                  <p>Fast and brutal combat with gothic environments.</p>
+                  <a class="btn-details" href="games/bloodborne.html">View details</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="slide" role="listitem" data-title="Elden Ring" data-desc="Open-world design and rich lore — community showcases and resources." data-img="images/eldenring.jpg">
+              <div class="slide-inner" tabindex="0" role="button" aria-pressed="false" aria-label="Open Elden Ring preview">
+                <div class="slide-thumb"><img src="images/eldenring.jpg" alt="Elden Ring" /></div>
+                <div class="slide-body">
+                  <h3>Elden Ring</h3>
+                  <p>Open-world design and rich lore — community showcases and resources.</p>
+                  <a class="btn-details" href="games/eldenring.html">View details</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="slide" role="listitem" data-title="Sekiro" data-desc="Precision parrying and challenging encounters." data-img="images/sekiro.jpg">
+              <div class="slide-inner" tabindex="0" role="button" aria-pressed="false" aria-label="Open Sekiro preview">
+                <div class="slide-thumb"><img src="images/sekiro.jpg" alt="Sekiro" /></div>
+                <div class="slide-body">
+                  <h3>Sekiro</h3>
+                  <p>Precision parrying and challenging encounters.</p>
+                  <a class="btn-details" href="games/sekiro.html">View details</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <button class="slider-arrow right" id="slider-next" aria-label="Next game">&rarr;</button>
+
+          <div class="slider-dots" id="slider-dots" role="tablist" aria-label="Slide indicators"></div>
+        </div>
+
+        <p style="margin-top:12px;"><a class="link-secondary" href="games.html">See all games →</a></p>
+      </div>
+    </section>
+
+    <!-- JOIN SECTION -->
+    <section id="join" class="join-section">
+      <div class="site-container join-container">
+        <div class="join-info">
+          <h2>Join the Community</h2>
+          <p>Become a member to receive updates, participate in discussions, and access exclusive previews and resources.</p>
+          <ul>
+            <li>News & updates</li>
+            <li>Early access to content</li>
+            <li>Community events and feedback sessions</li>
+          </ul>
+        </div>
+
+        <form id="join-form" class="join-form" novalidate>
+          <h3>Sign up</h3>
+
+          <label for="jm-name" class="sr-only">Full name</label>
+          <input id="jm-name" name="name" type="text" placeholder="Full name" required>
+
+          <label for="jm-email" class="sr-only">Email address</label>
+          <input id="jm-email" name="email" type="email" placeholder="Email address" required>
+
+          <label for="jm-password" class="sr-only">Password</label>
+          <input id="jm-password" name="password" type="password" placeholder="Password" required minlength="6">
+
+          <div class="join-actions">
+            <label class="checkbox">
+              <input type="checkbox" id="jm-terms" required>
+              I agree to the terms and privacy policy
+            </label>
+
+            <button type="submit" class="btn-join">Join</button>
+          </div>
+
+          <div id="join-success" class="join-success" aria-live="polite" hidden>
+            <p>Thanks for joining! Check your email for a confirmation link.</p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal for expanded game details -->
+  <div class="modal" id="game-modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="modal-panel" role="document" aria-labelledby="modal-title">
+      <button class="modal-close" id="modal-close" aria-label="Close">&times;</button>
+      <div class="modal-content">
+        <div class="modal-media"><img id="modal-image" src="" alt=""></div>
+        <div class="modal-info">
+          <h2 id="modal-title"></h2>
+          <p id="modal-desc"></p>
+          <div class="modal-actions">
+            <button id="modal-prev" class="btn-secondary" aria-label="Previous game">Prev</button>
+            <button id="modal-next" class="btn-secondary" aria-label="Next game">Next</button>
+            <a id="modal-details" class="btn-primary" href="#" style="margin-left:12px;">View details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="site-container">
+      <p>&copy; <span id="year"></span> FromSoftware Redesign</p>
+    </div>
+  </footer>
+
+  <script src="Js/main.js" defer></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
